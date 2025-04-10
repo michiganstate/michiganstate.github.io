@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR Staff Guidebook</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #bb86fc;
+        }
+        .notice {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-left: 5px solid #bb86fc;
+            margin-bottom: 20px;
+        }
+        .accordion {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+        }
+        .accordion:hover, .active {
+            background-color: #2a2a2a;
+        }
+        .panel {
+            padding: 0 15px;
+            background-color: #222;
+            display: none;
+            overflow: hidden;
+            border-left: 3px solid #bb86fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="notice">
+        <h2>MSR Guidebook</h2>
+        <p><strong>You are REQUIRED to read the guidebook if you are a staff member.</strong><br>
+        Failure to do so will result in an immediate demotion.<br>
+        <em>Note: There may be grammatical, spelling, or even capitalization issues. Please ignore those, I’m very sorry.</em></p>
+        <hr>
+        <p>This guidebook is property of MSR & MSR only.</p>
+    </div>
+
+    <h1>Michigan State Roleplay (MSR) Staff Guidebook</h1>
+
+    <button class="accordion">Introduction</button>
+    <div class="panel"><p>Welcome to the Michigan State Roleplay (MSR) staff team!... (content shortened)</p></div>
+
+    <button class="accordion">Staff Roles and Responsibilities</button>
+    <div class="panel"><p>1. Trial Moderator: ... (content shortened)</p></div>
+
+    <button class="accordion">General Staff Guidelines</button>
+    <div class="panel"><p>Professionalism: Maintain a respectful and impartial demeanor... (content shortened)</p></div>
+
+    <button class="accordion">MSR Templates</button>
+    <div class="panel"><p>STS:<br>:m We are starting a STS... (content shortened)</p></div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
