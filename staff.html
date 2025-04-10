@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSR Staff Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkPasscode() {
+            const pass = document.getElementById('passcode').value;
+            if (pass === 'Michigan') {
+                document.getElementById('staff-section').style.display = 'block';
+                document.getElementById('pass-form').style.display = 'none';
+            } else {
+                alert('Incorrect passcode.');
+            }
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            alert('Copied to clipboard!');
+        }
+    </script>
+</head>
+<body>
+    <header><h1>MSR Staff Portal</h1></header>
+    <main>
+        <div id="pass-form">
+            <input type="password" id="passcode" placeholder="Enter Staff Passcode">
+            <button onclick="checkPasscode()">Enter</button>
+        </div>
+        <div id="staff-section" style="display:none;">
+            <h2>MSR Guidebook</h2>
+            <p>You are <strong>REQUIRED</strong> to read this if you are a staff member...</p>
+            <pre class="template-block">:m We are starting a STS. Pause all roleplays. <button onclick="copyText(':m We are starting a STS. Pause all roleplays.')">📋</button></pre>
+            <pre class="template-block">:m Hello, MSR Community! The STS has begun... <button onclick="copyText(':m Hello, MSR Community! The STS has begun...')">📋</button></pre>
+            <!-- You can continue adding more templates like this -->
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </main>
+    <footer>&copy; 2025 MSR | Internal Use Only</footer>
+</body>
+</html>
